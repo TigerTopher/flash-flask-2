@@ -58,7 +58,7 @@ Notice that `username` is a `StringField` but `password` is a `PasswordField` si
 
 ### Form template
 
-(insert description here) (file app/templates/login.html)
+We will now create a standard-looking template which will have a username, password, and submit field. (file app/templates/login.html)
 
 ```
 {% extends "base.html" %}
@@ -85,7 +85,7 @@ Notice that `username` is a `StringField` but `password` is a `PasswordField` si
 {% endblock %}
 ```
 
-(insert description here)
+Note that we can also catch and print input errors using a for loop.
 
 
 ### Form Views
@@ -119,7 +119,8 @@ def login():
 (insert description here)
 
 
-Now try running the web server then going to `localhost:5000/login`. Notice that if we enter a username or password that is less than 6 characters or more than 32 characters long, the form outputs an error.
+Now try running the web server then going to `localhost:5000/login`. Notice that if we enter a username or password that is less than 6 characters or more than 32 characters long, the form outputs an error. Else, it redirects to index, which means the output was valid.
+
 
 
 
